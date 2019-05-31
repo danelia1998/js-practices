@@ -1,11 +1,8 @@
-var val = 'e'
+let  val = 'e'
 
 if (val == 'a') {
     console.log('a');
-}else if (val == 'b'){
-}else if (val == 'c'){
-}else if (val == 'd'){
-}else if (val == 'e'){
+}else if (val == 'b' || val == 'c' || val == 'd' || val == 'e'){
     console.log('others');
 }else {
     console.log('unknown');

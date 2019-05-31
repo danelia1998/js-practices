@@ -8,7 +8,7 @@ function every(firstPar, secondPar) {
     }
     else{
         let eachOne = false
-        for (var count = 0; count < arr.length; count++){
+        for (let  count = 0; count < arr.length; count++){
             eachOne = secondPar(arr[count], count, arr)
             if(!eachOne){
                 break;

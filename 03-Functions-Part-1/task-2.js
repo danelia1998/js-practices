@@ -4,7 +4,7 @@
 
 
 function f() {
-    var summing = 0
+    let  summing = 0
     for (each of arguments){
         if (typeof each == 'number'){
             summing = summing + each;
@@ -12,9 +12,8 @@ function f() {
             throw new Error('all parameters type should be a Number');
         }
     }
-    console.log(summing)
+    return summing
 }
 
 
-
-
+console.log(f(1,2,3))

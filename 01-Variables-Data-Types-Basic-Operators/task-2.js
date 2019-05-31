@@ -1,4 +1,4 @@
-var login = 'Owner'
+let  login = 'Owner'
 
-var message = (login == 'Pitter') ? 'hi' : (login == 'Owner') ? 'Hello' : (login == '') ? 'unknown' :'';
+let  message = (login == 'Pitter') ? 'hi' : (login == 'Owner') ? 'Hello' : (login == '') ? 'unknown' :'';
 console.log(message);

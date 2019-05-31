@@ -1,5 +1,5 @@
 const arr = [1,2,3];
-var d = function (item, i, arr){}
+let  d = function (item, i, arr){}
 
 forEachOne(arr, function(item, i, arr) {
     console.log(item);
@@ -15,7 +15,7 @@ function forEachOne(firstPar, secondPar) {
         throw new Error('Second parameter required and has to be only function')
     }
     else{
-        for (var count = 0; count < arr.length; count++){
+        for (let  count = 0; count < arr.length; count++){
             secondPar(arr[count], count, arr)
         }
     }

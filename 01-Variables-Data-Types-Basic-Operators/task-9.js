@@ -1,11 +1,11 @@
-var firstC;
-var secondC;
+let  firstC;
+let  secondC;
 
 for (firstC=2; firstC<=10; firstC++) {
-    var level = true;
+    let level = true;
     for (secondC = 2; secondC < firstC; secondC++) {
         if (firstC % secondC == 0) {
-            var level = false;
+            level = false;
             break;
         }
     }

@@ -8,7 +8,7 @@ function filterNew(firstPar, secondPar) {
     }
     else{
         let filtered = []
-        for (var count = 0; count < arr.length; count++){
+        for (let count = 0; count < arr.length; count++){
             const newContainer = arr[count];
             const eachOne = secondPar(newContainer, count, arr)
             if(eachOne){

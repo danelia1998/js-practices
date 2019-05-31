@@ -1,4 +1,4 @@
-var numbers = [6,2,3,4,5,6]
+let  numbers = [6,2,3,4,5,6]
 
 for (num of numbers){
    for (let i = 0; i<numbers.length; i++){
