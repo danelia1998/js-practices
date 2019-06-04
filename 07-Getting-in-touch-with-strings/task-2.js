@@ -1,10 +1,10 @@
 
 const checkSpam = function(source, example){
     if (typeof source == 'string' && typeof example == 'string'){
-        let transform = source.toLowerCase();
-        let exTransf = example.toLowerCase();
-        let first = transform.indexOf(exTransf)
-        if (first == 1){
+        let first = source.toLowerCase();
+        let second = example.toLowerCase();
+        let result = first.indexOf(second);
+        if (result == 1){
             return true;
         }
         else{
