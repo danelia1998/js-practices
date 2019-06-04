@@ -7,7 +7,6 @@ const person = {
     }
 };
 
-
 Object.defineProperty(person, 'rate', {
     configurable: false,
     enumerable:false,
@@ -16,7 +15,6 @@ Object.defineProperty(person, 'rate', {
 Object.defineProperty(person, 'salary',{
     configurable: false,
 });
-
 
 console.log(person.salary)
 

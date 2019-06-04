@@ -1,19 +1,15 @@
+
 const person = {
     get salary() {
-        const today = new Date()
-        const nextMonth = new Date()
-        nextMonth.setMonth(today.getMonth()+1)
-        nextMonth.setDate(1)
-        const daysLeft = (nextMonth - today) /  8.64e7;
-        if (daysLeft > 20){
-            return "good salary"
-        }else{
-            return "bad salary"
+        let newVar = new Date();
+        let monthDays = new Date(newVar.getFullYear(), newVar.getMonth() + 1, 0).getDate();
+        if (newVar.getDate() < (monthDays - 20)) {
+            return 'Good salary';
+        } else {
+            return 'Bad salary';
         }
     }
-};
+ };
 
-console.log(person.salary);
-
-
-
+ 
+ console.log(person.salary);
