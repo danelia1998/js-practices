@@ -1,21 +1,28 @@
-const person = {
-    rate:30,
-    get salary() {
-        const today = new Date();
-        const day = today.getDate();
-        return day * this.rate;
+const person = {};
+
+Object.defineProperties(person, {
+    rate:{
+        value: 0,
+        writable: true,
+        configurable: false,
+        enumerable:false,
+    },
+
+    salary: {
+        get() {
+            const today = new Date();
+            const day = today.getDate();
+            return day * this.rate;            
+        },
+
+        set() {
+            throw new Error('you cant use it');
+        }
     }
-};
+})
 
-Object.defineProperty(person, 'rate', {
-    configurable: false,
-    enumerable:false,
-});
 
-Object.defineProperty(person, 'salary',{
-    configurable: false,
-});
-
+person.rate = 30
 console.log(person.salary)
 
 
