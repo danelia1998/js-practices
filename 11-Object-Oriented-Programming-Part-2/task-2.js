@@ -1,10 +1,11 @@
 function CoffeeMachine(power) {
 	this.waterAmount = 0;
-	let WATER_HEAT_CAPACITY = 4200;
-	
-    this.getTimeToBoil= function() {
-		return this.waterAmount * WATER_HEAT_CAPACITY * 80 / power;
-	}
+    this.WATER_HEAT_CAPACITY = 4200;
+    this.power = power
+}
+
+CoffeeMachine.prototype.getTimeToBoil = function(){
+    return this.waterAmount * this.WATER_HEAT_CAPACITY * 80 / this.power
 }
 
 CoffeeMachine.prototype.run = function(){
