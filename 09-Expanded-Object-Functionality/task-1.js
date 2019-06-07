@@ -1,10 +1,13 @@
 Object.defineProperty(Object.prototype, 'extend', {
     value(source) {
         for (let key of Object.keys(source)) {
-            Object.defineProperty(this, key, Object.getOwnPropertyDescriptor(source, key))
+            if(!(key in this)){
+                Object.defineProperty(this, key, Object.getOwnPropertyDescriptor(source, key))
+            }
         }
     }
 })
+
 const data = { a: 'a' };
 const source = { a: 'A', b: 'b' };
 
