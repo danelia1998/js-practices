@@ -1,20 +1,16 @@
-
-Object.prototype.extend = function (source) {
-    console.log(this);
-    
-    // console.log(source)
-    for( key in source){
-        // console.log(key)
-        if (!(key in Object.getOwnPropertyDescriptor(this))){
-            this += key,
+Object.defineProperty(Object.prototype, 'extend', {
+    value(source) {
+        for (let key of Object.keys(source)) {
+            Object.defineProperty(this, key, Object.getOwnPropertyDescriptor(source, key))
         }
     }
-}
-// Object.defineProperties(Object.prototype, 'extend', {
-//     value:extend
-// })
+})
+const data = { a: 'a' };
+const source = { a: 'A', b: 'b' };
 
-const data = { a: 'a'}
-const source = { a: 'A', b: 'b'}
+Object.defineProperty(source, 'b', { writable: false });
 
-data.extend(source)
+data.extend(source);
+
+console.log(data); // { a: 'a', b: 'b' }
+console.log(Object.getOwnPropertyDescriptor(data, 'b').writable); //false
