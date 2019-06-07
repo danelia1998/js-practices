@@ -10,10 +10,9 @@ function CoffeeMachine(power, capacity) {
         if (amount < 0) {
             throw new Error("Value has to be positive");
         }else if (amount > capacity){
-            throw new Error("You can't put more water, than 400 ");
+            throw new Error("You can't put more water," + capacity);
         }
             waterAmount = amount; 
-        Ъ
         
     };
    
@@ -24,15 +23,15 @@ function CoffeeMachine(power, capacity) {
     this.run = function() {
         setTimeout(onReady, getTimeToBoil());
     };
+
     this.addWater = function (amount){
         this.setWaterAmount(waterAmount + amount)
     }
-
-   }
+}
    
-   var coffeeMachine = new CoffeeMachine(100000, 400);
-   coffeeMachine.setWaterAmount(100)
-   coffeeMachine.addWater(200);
-   coffeeMachine.addWater(100);
-//    coffeeMachine.addWater(300);
-   coffeeMachine.run();
+var coffeeMachine = new CoffeeMachine(100000, 400);
+coffeeMachine.setWaterAmount(100)
+coffeeMachine.addWater(200);
+coffeeMachine.addWater(100);
+// coffeeMachine.addWater(300);
+coffeeMachine.run();
