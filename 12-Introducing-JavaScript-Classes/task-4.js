@@ -1,10 +1,9 @@
 class MyString {
     constructor(){
-
     }
     reverse(str) {
-        var newString = "";
-        for (var i = str.length - 1; i >= 0; i--) {
+        let newString = "";
+        for (let i = str.length - 1; i >= 0; i--) {
             newString += str[i];
         }
         return newString;
@@ -28,7 +27,7 @@ class MyString {
 
 
 
-var str = new MyString();
+const str = new MyString();
 
 console.log(str.reverse('abcde')); // print 'edcba'
 console.log(str.ucFirst('abcde')); // print 'Abcde'
