@@ -1,5 +1,5 @@
 const isCustomerVerified = function(customer) {
-    if (customer.hasOwnProperty('verified') && customer.verified == true){
+    if (customer.hasOwnProperty('verified') && customer.verified){
         return Promise.resolve(true)
 
     }else{
@@ -9,22 +9,20 @@ const isCustomerVerified = function(customer) {
 
 
 
-
-
 const personFirst = {
     name: 'Oliver',
-    verified: true
+    verified: false
 };
 
 const personSecond = {
     name: 'Alex'
 };
 
-// isCustomerVerified(personFirst)
-//     .then(status => console.log(status)) // true
-//     .catch(error => console.log(error))
+isCustomerVerified(personFirst)
+    .then(status => console.log(status)) // true
+    .catch(error => console.log(error))
     
-isCustomerVerified(personSecond)
-    .then(status => console.log(status))
-    .catch(error => console.log(error)) // Customer is not verified
+// isCustomerVerified(personSecond)
+//     .then(status => console.log(status))
+//     .catch(error => console.log(error)) // Customer is not verified
 
